@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diatom Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .diatom-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .diatom-image:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .description h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .description p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .placeholder {
+            background: #e0e0e0;
+            padding: 60px;
+            border-radius: 10px;
+            color: #666;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diatom Microscopy</h1>
+        <p class="subtitle">Exploring the intricate beauty of microscopic algae</p>
+
+        <div class="image-container">
+            <!-- Replace 'diatom.jpg' with your actual diatom image filename -->
+            <!-- Or use an external URL like: https://example.com/diatom-image.jpg -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Diatoms_through_the_microscope.jpg/800px-Diatoms_through_the_microscope.jpg"
+                 alt="Diatom under microscope"
+                 class="diatom-image"
+                 onerror="this.parentElement.innerHTML='<div class=\'placeholder\'>Add your diatom image here<br>Place image file in the repository and update src attribute</div>'">
+        </div>
+
+        <div class="description">
+            <h2>About Diatoms</h2>
+            <p>
+                Diatoms are a major group of microalgae and are among the most common types of phytoplankton.
+                They are unicellular organisms that live in houses made of glass (silica). These microscopic algae
+                are encased within a unique cell wall made of silica called a frustule, which displays a wide variety
+                of intricate and beautiful patterns.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
